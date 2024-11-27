@@ -75,17 +75,3 @@ public class MapReduceJob {
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
 }
------------------------------------
-f.txt :
-hello Toaday is day.day is which
-which skotch whiskey.
------------------------------------
-user@user-H410M-S2-V3:~$ hadoop fs -mkdir /hello
-user@user-H410M-S2-V3:~$ hadoop fs -put /home/user/f.txt /hello
-user@user-H410M-S2-V3:~$ hadoop fs -ls /hello
-hadoop jar /home/user/mapr.jar /hello/f.txt /hello/out
-hadoop fs -ls /hello/out
-hadoop fs -cat /hello/out/part-r-00000
-
-===========================================================================================
-
